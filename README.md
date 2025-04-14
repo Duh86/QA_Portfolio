@@ -6,5 +6,7 @@
 ## Состав:
 
 - `Petstore_Project/` — автотесты на Swagger Petstore API
+  Тестовая документация к проекту (в разработке): https://docs.google.com/spreadsheets/d/1j8jeyYtd7nRnS2364yU5CNiRi5LHlKiD5zxTx8w1ITk/edit?usp=sharing
 - `Yandex_api_stand_tests_Project/` — автотесты на API Яндекса
+  Тестовая документация к проекту: https://docs.google.com/spreadsheets/d/1DNM4nS1JX1rgHGjgGns5vF27XqJUA3Vqf0CJ59I9ju0/edit?usp=sharing
 
