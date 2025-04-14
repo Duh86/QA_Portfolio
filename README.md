@@ -1,10 +1,10 @@
 
-configuration - файл с url ручек, и функцией скрепляющий их
-data - файл с телами запросов 
-sender_stand_requests - файл с запросами
-create_kit_name_test - файл с тестами
+# QA Portfolio
 
-преждем чем запускать тесты необходимо добавить адрес сервера в файле configuration в переменную SERVICE_URL
+Репозиторий с учебными проектами по автоматизированному тестированию.
 
-в проекте использовались библиотека requests
+## Состав:
+
+- `Petstore_Project/` — автотесты на Swagger Petstore API
+- `Yandex_api_stand_tests_Project/` — автотесты на API Яндекса
 
