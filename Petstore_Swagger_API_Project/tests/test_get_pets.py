@@ -1,7 +1,7 @@
 import pytest
 import requests
-from sender_stand_request import get_pets_by_status
-from configuration import PET_BY_STATUS_URL, get_full_URL
+from tests.sender_stand_request import get_pets_by_status
+from tests.configuration import PET_BY_STATUS_URL, get_full_URL
 
     #-------------------Вспомогательная функция для проверки status в запросе = status в ответе--#
 def extract_expected_statuses(value):

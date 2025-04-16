@@ -1,0 +1,45 @@
+name: Automated tests
+
+on: 
+  workflow_dispatch:
+    inputs:
+      deployment_target: 
+        description: choose target
+        required: true
+        default: 
+        type: choice 
+        options: 
+          - first_test_positive
+          - second_test_positive
+          - third_test_negative
+          - fourth_test_negative_separated
+
+
+jobs: 
+  test: 
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: setup Python
+        uses: actions/setup/Python@5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        
+      - name: first_test_positive
+        if: github.event.inputs.deployment_target == 'first_test_positive'
+        run: pytest tests/test_get_pets.py::test_get_pets_by_status_positive_1
+      - name: second_test_positive
+        if: github.event.inputs.deployment_target == 'second_test_positive'
+        run: pytest tests/test_get_pets.py::test_get_pets_by_status_positive_2
+      - name: third_test_negative
+        if: github.event.inputs.deployment_target == 'third_test_negative'
+        run: pytest tests/test_get_pets.py::test_get_pets_by_status_negative
+      - name: fourth_test_negative_separated
+        if: github.event.inputs.deployment_target == 'fourth_test_negative_separated'
+        run: pytest tests/test_get_pets.py::test_get_pets_by_status_negative_no_param

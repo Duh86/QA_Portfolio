@@ -1,5 +1,5 @@
 import requests
-from configuration import get_full_URL, PET_BY_STATUS_URL
+from tests.configuration import get_full_URL, PET_BY_STATUS_URL
 
 def get_pets_by_status(status_value):
     if isinstance(status_value, str):
