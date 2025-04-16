@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       deployment_target: 
-        description: choose target
+        description: Choose target
         required: true
         default: 
         type: choice 
