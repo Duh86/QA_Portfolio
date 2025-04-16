@@ -29,17 +29,17 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r Petstore_Swagger_API_Project/requirements.txt
         
       - name: first_test_positive
         if: github.event.inputs.deployment_target == 'first_test_positive'
-        run: pytest tests/test_get_pets.py::test_get_pets_by_status_positive_1
+        run: pytest Petstore_Swagger_API_Project/tests/test_get_pets.py::test_get_pets_by_status_positive_1
       - name: second_test_positive
         if: github.event.inputs.deployment_target == 'second_test_positive'
-        run: pytest tests/test_get_pets.py::test_get_pets_by_status_positive_2
+        run: pytest Petstore_Swagger_API_Project/tests/test_get_pets.py::test_get_pets_by_status_positive_2
       - name: third_test_negative
         if: github.event.inputs.deployment_target == 'third_test_negative'
-        run: pytest tests/test_get_pets.py::test_get_pets_by_status_negative
+        run: pytest Petstore_Swagger_API_Project/tests/test_get_pets.py::test_get_pets_by_status_negative
       - name: fourth_test_negative_separated
         if: github.event.inputs.deployment_target == 'fourth_test_negative_separated'
-        run: pytest tests/test_get_pets.py::test_get_pets_by_status_negative_no_param
+        run: pytest Petstore_Swagger_API_Project/tests/test_get_pets.py::test_get_pets_by_status_negative_no_param
